@@ -1,0 +1,815 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: #031525;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: auto;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+.main-ul li .active-li-a{
+    color: aqua;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+
+/* .....................Start Header-Section................ */
+header {
+    width: 100%;
+    /* padding: 10px; */
+    position: sticky;
+    top: 0px;
+    border-bottom: 1px solid #fff;
+    z-index: 9;
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    transition: 0.5s;
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    animation: header-bo-ani 9s linear infinite;
+}
+
+@keyframes header-bo-ani {
+    0% {
+        left: 10%;
+        width: 30px;
+        transform: translateX(0%);
+    }
+
+    50% {
+        transition: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        left: 85vw;
+        width: 30px;
+        transform: translateX(100%);
+    }
+
+    100% {
+        left: 10%;
+        width: 30px;
+        transform: translateX(0%);
+    }
+}
+
+/* .....Start brand-logo-desigin...... */
+.brand-logo {
+    padding: 12px 0px;
+}
+
+.brand-logo a {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 26px;
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    background-color: transparent;
+}
+
+.brand-logo a span {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 26px;
+    z-index: 0;
+    color: #07f123;
+    background-color: transparent;
+
+
+}
+
+.brand-logo a span:after {
+    position: absolute;
+    top: 0%;
+    left: -12px;
+    width: 40px;
+    height: 40px;
+    content: '';
+    background: #3e64ff;
+    z-index: -1;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top: 2px solid red;
+    animation: logo-ani 0.5s linear infinite
+}
+
+@keyframes logo-ani {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/* .....Close brand-logo-desigin...... */
+header .navbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar-section .main-ul {
+    display: flex !important;
+}
+
+.navbar-section .main-ul li {
+    margin-left: 15px;
+}
+
+.navbar-section .main-ul li a {
+    font-size: 18px;
+    transition: 0.5s;
+    position: relative;
+    background-color: transparent;
+}
+
+.navbar-section .main-ul li a::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: '';
+    transition: 0.5s;
+    width: 0px;
+}
+
+.navbar-section .main-ul li a:hover {
+    color: aqua;
+}
+
+.navbar-section .main-ul li:hover a::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    content: '';
+    width: 100%;
+    border: 1px solid aqua;
+}
+
+/* .....................Close Header-Section................ */
+/* .....................Start Banner-Section................ */
+.banner-section {
+    padding-block: calc(40px + 3vw);
+}
+
+.banner-container {
+    max-width: 940px;
+    margin: auto;
+    padding: 0px;
+}
+
+.banner-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner-section .row .col {
+    width: 50%;
+}
+
+.name-sect {
+    padding: 0px 15px;
+}
+
+.s-name {
+    text-transform: uppercase;
+    font-size: calc(20px + 1vw);
+    color: #fff;
+    margin-top: 30px;
+    font-family: Montserrat;
+}
+
+.typewriter {
+    font-size: calc(15px + 1vw);
+    color: aqua;
+    margin: 30px 0px;
+}
+
+.typewriter span {
+    font-size: calc(15px + 1vw);
+    color: aqua;
+    text-transform: uppercase;
+}
+
+.ba-btn {
+    border: 0px;
+    outline: 0px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.ba-btn a {
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: calc(10px +2vw);
+    font-weight: 600;
+    border: 1px solid #fff;
+
+    border-radius: 10px;
+    transition: 0.9s;
+}
+
+.ba-btn a:hover {
+    transition: 0.9s;
+    background-color: #031525;
+    background-color: aqua;
+}
+
+.images-sect {
+    text-align: center;
+}
+
+.images-sect img {
+    margin-top: -50px;
+    width: 40%;
+}
+
+/* .....................Close Banner-Section................ */
+/* .....................Start About-Section................ */
+.about-section {
+    padding-block: calc(30px + 2vw);
+    padding-bottom: 50px;
+}
+
+.about-section h1 {
+    text-transform: uppercase;
+    font-size: calc(20px + 1vw);
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.about-section h1 span {
+    color: aqua;
+    font-family: Montserrat;
+}
+
+.about-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-body .col {
+    width: 50%;
+}
+
+.about-text {
+    padding: 0px 15px;
+}
+
+h2 {
+    font-size: 2rem !important;
+    color: gray;
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.9rem;
+    color: #fff;
+}
+
+.about-img {
+    text-align: center;
+}
+
+.about-icon a {
+    background-color: transparent;
+    margin-right: 8px;
+}
+
+.about-icon {
+    background-color: #116466;
+    display: inline-block;
+    border-radius: 20px;
+    width: 262px;
+    height: 42px;
+    padding: 4px 20px 4px 30px;
+    text-align: center;
+    margin-top: 20px
+}
+
+.about-img img {
+    margin: 50px auto;
+    width: 300px;
+    height: 350px;
+    transition: .3s;
+    animation: bord 2s linear;
+    border-top: 10px solid #116466;
+    border-bottom: 10px solid #116466;
+}
+
+/* ..........Start Testimonial and ratting-section....... */
+.ratting-section {
+    padding-bottom: 50px;
+}
+
+.ratting-section h2 {
+    font-size: calc(20px + 2vw);
+    color: #fff;
+    margin-bottom: 2rem !important;
+    margin-top: 2rem !important;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ratting-section h2 span {
+    color: aqua;
+    font-size: calc(15px + 1.5vw);
+}
+
+/* .testimonial-col{
+    width: 100%;
+} */
+.testimonial-slider {
+    display: flex;
+}
+
+.testimonial {
+    margin: 10px;
+}
+
+.testimonial .testimonial-body {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #116466;
+    color: #fff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 3px 4px 4px 2px rgba(0, 0, 0, .3);
+}
+
+.testimonial-img,
+.testimonial-text,
+p,
+i {
+    background-color: transparent;
+}
+
+.testimonial-text {
+    padding-right: 10px;
+    transition: .4s;
+    padding-left: 40px;
+}
+
+.testimonial-img img {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 100%;
+}
+
+.owl-carousel .owl-nav button.owl-prev span {
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 100%;
+    position: absolute;
+    top: 33%;
+    left: 0%;
+    transform: translate(-50%, 0%);
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 100%;
+    position: absolute;
+    top: 33%;
+    right: -2%;
+    transform: translate(-50%, 0%);
+}
+
+.name-1 {
+    margin: 10px 0px;
+}
+
+/* .....................Close About-Section................ */
+/* .....................Start Skills-Section............... */
+.skills-container {
+    max-width: 940px;
+    margin: auto;
+    padding-block: calc(30px + 2vw);
+}
+
+.skills-h2 {
+    font-size: 2rem !important;
+    color: #fff;
+    text-align: center;
+    margin: 0px !important;
+    font-family: Montserrat;
+}
+.skills-h2 span{
+    color: aqua;
+    font-size: 2rem !important;
+}
+
+.skills-bgimg {
+    background-image: url("../images/background2.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+    margin-bottom: 80px;
+
+}
+
+.skills-bgimg .col {
+    background-color: transparent;
+    padding: 50px;
+    padding-bottom: 80px;
+}
+
+.skills-bgimg .btn {
+    border: 1px solid#fff;
+    font-size: 14px;
+    color: #fff;
+    padding: 12px 26px;
+    margin: 10px;
+    transition: 2s;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.skills-bgimg .btn a{
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.skills-bgimg .active {
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+}
+
+.skills-bgimg .col .btn:hover {
+    transition: 2s;
+    background-color: #1d8080;
+}
+
+/* .......Accordion........ */
+.accordion-sect h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    background-color: #000;
+    margin-top: 10px;
+}
+
+.accordion-sect h3 span {
+    background-color: transparent;
+}
+
+.accordion-sect .active {
+    transition: 3s;
+    display: block;
+}
+
+.accord-body {
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    transition: 3s;
+    display: none;
+}
+
+.accord-body ol {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.accord-body ol li {
+    color: #fff;
+    margin-block: 15px;
+}
+
+.accord-body .btn {
+    margin-left: -15px;
+    padding: 5px 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* .....................Close Skills-Section............... */
+/* .....................Start Project-Section............... */
+.prject-section {
+    padding-block: calc(25px + 0.5vw);
+}
+
+.prject-section h1 {
+    font-size: calc(20px + 1vw);
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.box-site {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-site .item-card {
+    width: 50%;
+}
+
+.site-body {
+    margin: 15px 15px;
+}
+
+.site-img {
+    overflow: hidden;
+}
+
+.site-img img {
+    width: 100%;
+    transition: 1s;
+}
+
+.site-img img:hover {
+    transition: 1s;
+    transform: scale(1.1, 1.1);
+}
+
+.site-text {
+    padding: 15px;
+}
+
+.site-text h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-block: 15px;
+    background-color: transparent;
+}
+
+.site-text {
+    background-color: darkcyan;
+}
+
+.site-text p {
+    color: #fff;
+    margin-block: 15px;
+}
+
+.btn-link a {
+    display: inline-block;
+    width: 100%;
+    /* color: #fff; */
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 10px;
+    transition: 2s;
+    background-color: #fff;
+}
+
+.btn-link a:hover {
+    transition: 2s;
+    background-color: #000;
+}
+
+.btn-link a i {
+    font-size: 20px;
+    color: #0d6efd;
+}
+.project-h2 span{
+    font-size: calc(20px + 1vw);
+    color: aqua;
+}
+/* .....................Close Project-Section............... */
+/* .....................Start Exprence-Section.............. */
+.experience-section {
+    padding-block: calc(25px + 1vw);
+}
+
+.ex-container {
+    max-width: 1049px;
+    margin: auto;
+    padding: 0px 15px;
+}
+
+.experience {
+    display: flex;
+}
+
+.experience .col {
+    width: 50%;
+    padding: 0px 15px;
+}
+
+.ex-h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0px !important;
+    font-family: Montserrat;
+}
+
+.acd {
+    border-left: 2px solid #116466;
+    padding-block: 30px;
+    margin-top: 10px;
+    height: 85%;
+}
+
+.box-1 {
+    margin-bottom: 30px;
+}
+
+.box-1 h3 {
+    margin-left: -20px;
+    display: inline-block;
+    background-color: #116466;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 30px;
+}
+
+.box-1 h3 span i {
+    margin-right: 10px;
+}
+
+.box-1 h3 span {
+    background-color: transparent;
+}
+
+.box-1 h4 {
+    color: #fff;
+    margin-block: 10px;
+    font-size: 14px;
+}
+.box-1 p{
+    font-size: 14px;
+}
+.totex{
+    text-align: center;
+    background-color: #116466;
+    padding: 8px 12px;
+    border-radius: 30px;
+}
+/* .....................Start Exprence-Section.............. */
+
+/* .....................Start Footer-Section................ */
+footer {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    border-top: 1px solid #fff;
+}
+
+footer::after {
+    position: absolute;
+    content: '';
+    top: -1px;
+    transition: 0.5s;
+    width: 100%;
+    border-top: 2px solid red;
+    animation: header-bo-ani 9s linear infinite;
+}
+
+.footer-container {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.fa-facebook,
+.fa-linkedin,
+.fa-whatsapp,
+.fa-google {
+    background-color: #fff;
+    text-align: center;
+    color: #031525;
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.fa-facebook:hover,
+.fa-linkedin:hover,
+.fa-whatsapp:hover,
+.fa-google:hover {
+    background: linear-gradient(90deg, #1345e6 0%, #ed239f 100%);
+    color: #fff;
+    transition: 2s;
+    width: 37px;
+    height: 37px;
+
+}
+
+.foot-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.foot-ul li a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.foot-ul li a:hover {
+    color: aqua;
+}
+
+#foot {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#foot span {
+    color: aqua;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #000;
+    color: #fff;
+    padding-inline: 12px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    height: 80px;
+    display: none;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.dis {
+    display: flex;
+    align-items: center;
+    height: 78px;
+    background-color: #000;
+}
+
+.scroll-top i {
+    font-size: 12px;
+}
+
+@keyframes scrolltop {
+    0% {
+        margin-top: 0px;
+        transition: 1s;
+    }
+
+    100% {
+        margin-bottom: 50px;
+        transition: 1s;
+    }
+}
+
+.scroll-top i {
+    animation-name: scrolltop;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+    display: inline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+button a{
+    background-color: transparent;
+}
+/* .....................Close Footer-Section................ */
